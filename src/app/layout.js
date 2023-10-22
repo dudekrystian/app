@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar/Navbar";
 
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
@@ -13,12 +14,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <div className="container">
+    <html>
       <body className={roboto.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <div className="container">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
-    </div>
+    </html>
   );
 }

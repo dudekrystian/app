@@ -5,7 +5,7 @@ import Button from "@/components/Button/Button";
 
 export const metadata = {
   title: "contact Information",
-  description: "This is Contact Page",
+  description: "Contact Page",
 };
 
 const Contact = () => {

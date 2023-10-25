@@ -9,7 +9,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: "Portfolio website",
-  description: "website with our project",
+  description: "our project",
 };
 
 export default function RootLayout({ children }) {

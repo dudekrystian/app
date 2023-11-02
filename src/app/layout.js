@@ -5,6 +5,8 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
+
 const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
@@ -17,11 +19,13 @@ export default function RootLayout({ children }) {
     <html>
       <body className={roboto.className}>
         <ThemeProvider>
-          <div className="container">
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
+          <AuthProvider>
+            <div className="container">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

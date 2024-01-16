@@ -9,6 +9,8 @@ export const metadata = {
 };
 
 const Contact = () => {
+
+  console.log('contact')
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Let's Keep in Touch</h1>
